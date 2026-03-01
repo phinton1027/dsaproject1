@@ -70,6 +70,8 @@ def run_menu():
         output_name = "processed_image.png"
         editor.save(output_name)
         print("Done")
+        with open("output.txt", "w") as f:
+            f.write(str(MiniPhotoshop._image_to_2d_array(editor)))
 
     except Exception as e:
         print(f"Error: {e}")
